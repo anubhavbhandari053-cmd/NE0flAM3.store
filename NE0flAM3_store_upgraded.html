@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NE0flAM3 | Clothing & Accessories</title>
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Shop streetwear and accessories at NE0flAM3.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080808'/%3E%3Ctext x='50%25' y='54%25' font-family='Arial' font-size='27' font-weight='bold' text-anchor='middle' fill='white'%3EN3%3C/text%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080808;color:#f5f5f5;font:15px Arial,Helvetica,sans-serif}header{border-bottom:1px solid #292929;background:#080808;position:sticky;top:0}nav{max-width:1050px;margin:auto;padding:18px 20px;display:flex;align-items:center;gap:20px}.logo{font-weight:800;font-size:21px;letter-spacing:2px}.links{margin-left:auto;display:flex;gap:18px}.links a{color:#bbb;text-decoration:none}.wrap{max-width:1050px;margin:auto;padding:26px 20px}.hero{padding:55px 0 42px;border-bottom:1px solid #242424}.hero h1{font-size:clamp(34px,6vw,58px);margin:12px 0}.hero p{color:#aaa;max-width:520px;line-height:1.7}.button{background:#f2f2f2;color:#111;border:0;border-radius:4px;padding:12px 17px;cursor:pointer;font-weight:700}.button.secondary{background:transparent;color:#eee;border:1px solid #555}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.section-title{font-size:22px;margin:30px 0 18px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters button{background:#101010;color:#ddd;border:1px solid #333;padding:8px 12px;border-radius:4px;cursor:pointer}.filters button.active{background:#eee;color:#111}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{border:1px solid #292929;background:#0d0d0d;border-radius:6px;overflow:hidden}.photo{height:175px;background:#171717;display:flex;align-items:center;justify-content:center;color:#777;font-size:12px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}.details{padding:13px}.details h3{font-size:15px;margin:0 0 7px}.details p{color:#999;font-size:13px;min-height:32px;margin:0 0 12px}.price{font-weight:700;margin-bottom:12px}.details .button{width:100%;padding:10px}.cart-list{display:grid;gap:10px;margin:14px 0}.cart-item{display:flex;align-items:center;gap:12px;border-bottom:1px solid #292929;padding:10px 0}.cart-item img{width:54px;height:54px;object-fit:cover;background:#222}.cart-item .info{flex:1}.small{color:#aaa;font-size:13px}.cart-item button{background:transparent;color:#ddd;border:1px solid #444;padding:6px 9px;cursor:pointer}.admin{border:1px solid #303030;border-radius:6px;padding:18px;margin:34px 0;background:#0c0c0c}.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.admin input,.admin textarea,.admin select{width:100%;padding:11px;background:#080808;color:#eee;border:1px solid #333;border-radius:4px;margin-top:5px}.admin textarea{min-height:70px;resize:vertical}.admin label{font-size:13px;color:#bbb}.admin .full{grid-column:1/-1}.cartbox{border:1px solid #292929;border-radius:6px;padding:18px;margin:28px 0}.checkout-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.checkout-grid input,.checkout-grid select{width:100%;padding:11px;background:#080808;color:#eee;border:1px solid #333;border-radius:4px}.notice{font-size:12px;color:#999;line-height:1.6}footer{border-top:1px solid #292929;color:#888;padding:25px 20px;text-align:center}@media(max-width:750px){.products{grid-template-columns:repeat(2,1fr)}.photo{height:145px}.hero{padding-top:35px}.admin-grid,.checkout-grid{grid-template-columns:1fr}.links{gap:10px}.links a:first-child{display:none}}@media(max-width:400px){.products{gap:8px}.details{padding:10px}.photo{height:120px}}
+[hidden]{display:none!important}\n</style>
+</head>
+<body>
+<header><nav><div class="logo">NE0flAM3</div><div class="links"><a href="#shop">Shop</a><a href="#cart">Cart (<span id="cartCount">0</span>)</a><a href="#admin">Admin</a></div></nav></header>
+<main class="wrap">
+<section class="hero"><div class="small">CLOTHING · ACCESSORIES</div><h1>Everyday pieces.<br> Your own style.</h1><p>Baggy denim, easy layers and simple accessories. Find your next everyday favourite at NE0flAM3.</p><a href="#shop"><button class="button">Shop collection</button></a></section>
+<section id="shop"><div class="row"><h2 class="section-title">Shop all</h2><div class="small">Prices in NPR (रु)</div></div><div class="filters" id="filters"><button class="active" data-cat="All">All</button><button data-cat="Clothing">Clothing</button><button data-cat="Accessories">Accessories</button></div><div class="products" id="products"></div></section>
+<section class="cartbox" id="cart"><div class="row"><h2 class="section-title" style="margin:0">Your cart</h2><span class="small" id="cartCountLabel">0 items</span></div><div id="cartItems" class="cart-list"></div><div class="row"><strong>Total</strong><strong id="total">रु 0</strong></div><h3>Checkout request</h3><div class="checkout-grid"><input id="customerName" placeholder="Your name"><input id="customerPhone" placeholder="Phone number"><input id="customerAddress" placeholder="Delivery address" style="grid-column:1/-1"><select id="payment"><option>Cash on delivery</option><option>eSewa (manual confirmation needed)</option><option>Khalti (manual confirmation needed)</option><option>Bank transfer</option></select><button class="button" onclick="placeOrder()">Prepare order</button></div><p class="notice">This demo prepares an order message for you to copy or send. It does not automatically transmit orders or process online payments until you connect a real order backend and approved payment provider.</p><textarea id="orderText" aria-label="Order summary" placeholder="Your order summary will appear here…" style="width:100%;min-height:90px;background:#080808;color:#eee;border:1px solid #333;padding:10px;border-radius:4px;margin-top:10px"></textarea><button class="button secondary" onclick="copyOrder()" style="margin-top:8px">Copy order details</button></section>
+<section class="admin" id="admin">
+<div id="adminLogin">
+  <h2 class="section-title" style="margin-top:0">Owner sign in</h2>
+  <p class="notice">This is a browser-only demo gate, not secure production authentication. Do not use it to protect real customer or payment data.</p>
+  <label>Admin passcode<input id="adminPass" type="password" autocomplete="current-password" placeholder="Enter demo passcode"></label>
+  <button class="button" type="button" onclick="unlockAdmin()" style="margin-top:10px">Unlock admin</button>
+  <p id="loginMessage" class="small" role="status"></p>
+</div>
+<div id="adminPanel" hidden><div class="row"><h2 class="section-title" style="margin:0 0 6px">Admin product editor</h2><span class="small">Local demo</span></div><p class="notice">Use this section to add products or edit prices, descriptions and photos. Changes are saved in this browser only. For a secure multi-device admin account, the site needs hosting plus a database and authentication.</p><div class="admin-grid"><label>Product name<input id="pName" placeholder="e.g. Baggy jeans"></label><label>Category<select id="pCategory"><option>Clothing</option><option>Accessories</option></select></label><label>Price (NPR)<input id="pPrice" type="number" min="0" placeholder="1500"></label><label>Photo URL<input id="pImage" placeholder="https://..."></label><label class="full">Description<textarea id="pDescription" placeholder="Describe the item…"></textarea></label><div class="full row"><button class="button" onclick="saveProduct()">Add product</button><button class="button secondary" onclick="resetProducts()">Reset sample products</button></div></div><p id="adminMessage" class="small"></p><h3>Your products</h3><div id="adminList"></div></section>
+</main><footer>NE0flAM3 · Simple streetwear & accessories</footer>
+<script>
+// DEMO ONLY: this passcode check runs in the browser and is not secure.
+const DEMO_ADMIN_PASSCODE = "CHANGE-ME-123";
+function unlockAdmin(){
+  const entered=document.getElementById("adminPass").value;
+  if(entered===DEMO_ADMIN_PASSCODE){
+    document.getElementById("adminLogin").hidden=true;
+    document.getElementById("adminPanel").hidden=false;
+    document.getElementById("loginMessage").textContent="";
+    sessionStorage.setItem("neoflam3_admin_demo","yes");
+  }else{
+    document.getElementById("loginMessage").textContent="Incorrect passcode.";
+  }
+}
+function restoreDemoAdmin(){
+  if(sessionStorage.getItem("neoflam3_admin_demo")==="yes"){
+    document.getElementById("adminLogin").hidden=true;
+    document.getElementById("adminPanel").hidden=false;
+  }
+}
+const samples=[
+{id:1,name:"Baggy Denim Jeans",category:"Clothing",price:2200,description:"Relaxed-fit denim for everyday wear.",image:""},
+{id:2,name:"Classic Tee",category:"Clothing",price:850,description:"An easy everyday cotton tee.",image:""},
+{id:3,name:"Relaxed Trousers",category:"Clothing",price:1650,description:"Comfortable trousers with a loose fit.",image:""},
+{id:4,name:"Zip Hoodie",category:"Clothing",price:2100,description:"A simple layer for cooler days.",image:""},
+{id:5,name:"Steel Chain",category:"Accessories",price:500,description:"Minimal chain to finish your look.",image:""},
+{id:6,name:"Everyday Ring",category:"Accessories",price:350,description:"A clean, simple accessory.",image:""},
+{id:7,name:"Mini Shoulder Bag",category:"Accessories",price:1200,description:"A compact bag for everyday essentials.",image:""},
+{id:8,name:"Pendant Necklace",category:"Accessories",price:650,description:"A subtle pendant necklace.",image:""}
+];
+let products=load("neoflam3_products",samples), cart=load("neoflam3_cart",[]), activeCategory="All", editingId=null;
+function load(k,fallback){try{const v=localStorage.getItem(k);return v?JSON.parse(v):JSON.parse(JSON.stringify(fallback))}catch(e){return JSON.parse(JSON.stringify(fallback))}}
+function persist(){localStorage.setItem("neoflam3_products",JSON.stringify(products));localStorage.setItem("neoflam3_cart",JSON.stringify(cart))}
+function money(n){return "रु "+Number(n||0).toLocaleString("en-IN")}
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function renderProducts(){let list=products.filter(p=>activeCategory==="All"||p.category===activeCategory);document.getElementById("products").innerHTML=list.map(p=>`<article class="product"><div class="photo">${p.image?`<img src="${safe(p.image)}" alt="${safe(p.name)}" onerror="this.remove();this.parentElement.textContent='Add a photo URL in Admin'">`:"Add a photo URL in Admin"}</div><div class="details"><h3>${safe(p.name)}</h3><p>${safe(p.description)}</p><div class="price">${money(p.price)}</div><button class="button" onclick="addToCart(${p.id})">Add to cart</button></div></article>`).join("")||'<p class="small">No products in this category yet.</p>'}
+function renderCart(){document.getElementById("cartItems").innerHTML=cart.map(i=>{let p=products.find(p=>p.id===i.id);if(!p)return "";return `<div class="cart-item"><img src="${safe(p.image||"")}" alt=""><div class="info"><strong>${safe(p.name)}</strong><div class="small">${money(p.price)} each</div><div class="small">Qty: ${i.qty}</div></div><button onclick="changeQty(${i.id},-1)">−</button><button onclick="changeQty(${i.id},1)">+</button><button onclick="removeItem(${i.id})">Remove</button></div>`}).join("")||'<p class="small">Your cart is empty.</p>';let count=cart.reduce((s,i)=>s+i.qty,0),total=cart.reduce((s,i)=>{let p=products.find(p=>p.id===i.id);return s+(p?p.price*i.qty:0)},0);document.getElementById("cartCount").textContent=count;document.getElementById("cartCountLabel").textContent=count+" item"+(count===1?"":"s");document.getElementById("total").textContent=money(total)}
+function renderAdmin(){document.getElementById("adminList").innerHTML=products.map(p=>`<div class="cart-item"><div class="info"><strong>${safe(p.name)}</strong><div class="small">${safe(p.category)} · ${money(p.price)}</div></div><button onclick="editProduct(${p.id})">Edit</button><button onclick="deleteProduct(${p.id})">Delete</button></div>`).join("")}
+function addToCart(id){let i=cart.find(i=>i.id===id);if(i)i.qty++;else cart.push({id,qty:1});persist();renderCart()}
+function changeQty(id,d){let i=cart.find(i=>i.id===id);if(i)i.qty+=d;cart=cart.filter(i=>i.qty>0);persist();renderCart()}
+function removeItem(id){cart=cart.filter(i=>i.id!==id);persist();renderCart()}
+document.getElementById("filters").addEventListener("click",e=>{if(e.target.dataset.cat){activeCategory=e.target.dataset.cat;document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("active",b===e.target));renderProducts()}});
+function saveProduct(){let name=document.getElementById("pName").value.trim(),price=Number(document.getElementById("pPrice").value);if(!name||!Number.isFinite(price)||price<0){document.getElementById("adminMessage").textContent="Enter a product name and valid price.";return}let item={id:editingId||Date.now(),name,category:document.getElementById("pCategory").value,price, image:document.getElementById("pImage").value.trim(),description:document.getElementById("pDescription").value.trim()};if(editingId)products=products.map(p=>p.id===editingId?item:p);else products.push(item);editingId=null;["pName","pPrice","pImage","pDescription"].forEach(id=>document.getElementById(id).value="");document.querySelector("#admin .button").textContent="Add product";document.getElementById("adminMessage").textContent="Product saved in this browser.";persist();renderAll()}
+function editProduct(id){let p=products.find(p=>p.id===id);if(!p)return;editingId=id;document.getElementById("pName").value=p.name;document.getElementById("pCategory").value=p.category;document.getElementById("pPrice").value=p.price;document.getElementById("pImage").value=p.image||"";document.getElementById("pDescription").value=p.description||"";document.querySelector("#admin .button").textContent="Save changes";document.getElementById("admin").scrollIntoView({behavior:"smooth"})}
+function deleteProduct(id){if(!confirm("Delete this product?"))return;products=products.filter(p=>p.id!==id);cart=cart.filter(i=>i.id!==id);persist();renderAll()}
+function resetProducts(){if(!confirm("Reset to sample products?"))return;products=JSON.parse(JSON.stringify(samples));cart=[];persist();renderAll()}
+function placeOrder(){if(!cart.length){alert("Add a product to your cart first.");return}let name=document.getElementById("customerName").value.trim(),phone=document.getElementById("customerPhone").value.trim(),address=document.getElementById("customerAddress").value.trim();if(!name||!phone||!address){alert("Please enter your name, phone number and delivery address.");return}let lines=cart.map(i=>{let p=products.find(p=>p.id===i.id);return p?`${p.name} x ${i.qty} — ${money(p.price*i.qty)}`:""}).filter(Boolean);let total=cart.reduce((s,i)=>{let p=products.find(p=>p.id===i.id);return s+(p?p.price*i.qty:0)},0);document.getElementById("orderText").value=`NE0flAM3 ORDER REQUEST\\nName: ${name}\\nPhone: ${phone}\\nAddress: ${address}\\nPayment preference: ${document.getElementById("payment").value}\\n\\n${lines.join("\\n")}\\n\\nTotal before delivery: ${money(total)}\\nPlease confirm availability, delivery fee and payment instructions.`}
+function copyOrder(){let t=document.getElementById("orderText");if(!t.value){alert("Prepare your order first.");return}t.select();try{document.execCommand("copy");alert("Order details copied. Send them to the store owner to confirm.");}catch(e){alert("Select and copy the order text manually.")}}
+function renderAll(){renderProducts();renderCart();renderAdmin()}
+renderAll();
+</script>
+</body></html>
